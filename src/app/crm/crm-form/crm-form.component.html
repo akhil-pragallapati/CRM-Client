@@ -1,0 +1,47 @@
+<form class="row" [formGroup]="service.crmForm"  (submit) = "onSubmit()" [class.submitted] = "submitted">
+        <!-- For userName -->
+    <div class="col-12 mb-3">
+        <label class="form-label">Username</label>
+        <input class="form-control form-control-lg" placeholder="Enter your username" formControlName="userName">
+    </div>
+
+    <!-- For email -->
+    <div class="col-12 mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control form-control-lg" placeholder="Enter your email" formControlName="email">
+    </div>
+
+    <!-- For password -->
+    <div class="col-12 mb-3">
+        <label class="form-label">Password</label> 
+        <input type="password" class="form-control form-control-lg" placeholder="Enter your password" formControlName="password">
+    </div>
+
+    <!-- For firstName -->
+    <div class="col-12 mb-3">
+        <label class="form-label">First Name</label>
+        <input class="form-control form-control-lg" placeholder="Enter your first name" formControlName="firstName">
+    </div>
+
+    <!-- For lastName -->
+    <div class="col-12 mb-3">
+        <label class="form-label">Last Name</label>
+        <input class="form-control form-control-lg" placeholder="Enter your last name" formControlName="lastName">
+    </div>
+
+    <!-- For address -->
+    <div class="col-12 mb-3">
+        <label class="form-label">Address</label>
+        <input class="form-control form-control-lg" placeholder="Enter your address" formControlName="address">
+    </div>
+
+    <!-- For phoneNumber -->
+    <div class="col-12 mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-control form-control-lg" placeholder="Enter your phone number" formControlName="phoneNumber">
+    </div>
+
+    <div class="col-12 d-grid">
+        <button class="btn btn-lg btn-primary" type="submit">Submit</button>
+    </div>
+</form>
