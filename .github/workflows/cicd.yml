@@ -29,3 +29,4 @@ jobs:
         run: docker rm -f CRM-Client-app-container
       - name: Run docker container
         run: docker run -d -p 8081:8081 --name CRM-Client-app-container akhilpragallapati/crm-client
+
