@@ -13,6 +13,6 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 
 #copy the build angular app from the build stage
-COPY --from=build /app/dist/client/browser .
+COPY --from=build /app/dist/CRM-Client/browser .
 EXPOSE 8081
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
