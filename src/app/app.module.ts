@@ -14,6 +14,7 @@ import { CrmHomeComponent } from './crm-home/crm-home.component';
 import { CrmDetailsComponent } from './crm/crm-details/crm-details.component';
 import { CrmListComponent } from './crm/crm-list/crm-list.component';
 import { CrmUpdateComponent } from './crm/crm-update/crm-update.component';
+import { CrmHeaderComponent } from './crm-header/crm-header.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CrmUpdateComponent } from './crm/crm-update/crm-update.component';
     CrmHomeComponent,
     CrmDetailsComponent,
     CrmListComponent,
-    CrmUpdateComponent
+    CrmUpdateComponent,
+    CrmHeaderComponent
   ],
   imports: [
     BrowserModule,

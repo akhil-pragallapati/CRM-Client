@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-crm-home',
   templateUrl: './crm-home.component.html',
-  styles: ``
+  styleUrl: './crm-home.component.css'
 })
 export class CrmHomeComponent {
 
