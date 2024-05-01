@@ -14,5 +14,5 @@ RUN rm -rf *
 
 #copy the build angular app from the build stage
 COPY --from=build /app/dist/crm-client/browser .
-EXPOSE 8081
+EXPOSE 80
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
