@@ -1,0 +1,31 @@
+name: Deploy CRM-Client Angular Applicatiom
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Login to docker hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: build docker image
+        run: docker build -t akhilpragallapati/crm-client .
+      - name: Publish image to docker hub
+        run: docker push akhilpragallapati/crm-client:latest
+
+  delpoy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull akhilpragallapati/crm-client:latest
+      - name: Delete old container if exists
+        run: docker rm -f CRM-Client-app-container
+      - name: Run docker container
+        run: docker run -d -p 8081:8081 --name CRM-Client-app-container akhilpragallapati/crm-client

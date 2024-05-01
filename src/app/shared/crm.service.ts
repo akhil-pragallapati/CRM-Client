@@ -12,8 +12,10 @@ import { Crm } from './crm.model';
 export class CrmService {
 
   constructor(private fb:FormBuilder, private http: HttpClient) { }
-
-  readonly baseURL = 'http://localhost:3000/api/crms/'
+  // its the URL port which runs from node application
+  //readonly baseURL = 'http://localhost:3000/api/crms/'
+  // below is the public Ip from the AWS Ec2 on which its hosted 
+  readonly baseURL = 'http://18.215.180.10:4000/api/crms/'
 
 list:Crm[] = [];
 
